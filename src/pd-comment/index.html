@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PD Comment — web components</title>
+    <script src="./pd-comment.js"></script>
+    <style>
+      :root {
+        --pd-comment-color: grey;
+        --pd-comment-hover-color: lightblue;
+        --pd-submit-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <pd-comment data-comment-endpoint="/api/comment?api-version=1"></pd-comment>
+  </body>
+</html>
