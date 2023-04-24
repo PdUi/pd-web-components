@@ -1,0 +1,44 @@
+{
+  "name": "pd-lit-web-components",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean && tsc && rollup -c",
+    "build:watch": "tsc --watch",
+    "clean": "rimraf dist minified",
+    "format": "prettier \"**/*.{html,json,md,ts}\" --ignore-path ./.eslintignore --write",
+    "lint": "npm run format && npm run lint:lit-analyzer && npm run lint:eslint",
+    "lint:eslint": "eslint \"lib/**/*.ts\"",
+    "lint:lit-analyzer": "lit-analyzer \"lib/src/**/*.ts\"",
+    "serve": "wds --watch --app-index sandbox/index.html",
+    "serve:prod": "MODE=prod npm run serve",
+    "test": "npm run test:dev && npm run test:prod",
+    "test:dev": "wtr",
+    "test:watch": "wtr --watch",
+    "test:prod": "MODE=prod wtr",
+    "test:prod:watch": "MODE=prod wtr --watch"
+  },
+  "dependencies": {
+    "lit": "^2.7.2"
+  },
+  "devDependencies": {
+    "@open-wc/testing": "^3.1.8",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@rollup/plugin-terser": "^0.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "@web/dev-server": "^0.2.0",
+    "@web/dev-server-legacy": "^2.0.0",
+    "@web/test-runner": "^0.16.0",
+    "@web/test-runner-playwright": "^0.10.0",
+    "@webcomponents/webcomponentsjs": "^2.8.0",
+    "eslint": "^8.38.0",
+    "lit-analyzer": "^1.2.1",
+    "prettier": "^2.8.7",
+    "rimraf": "^5.0.0",
+    "rollup": "^3.20.7",
+    "rollup-plugin-summary": "^2.0.0",
+    "typescript": "^5.0.4"
+  }
+}
