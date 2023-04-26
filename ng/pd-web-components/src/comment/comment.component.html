@@ -1,0 +1,17 @@
+<button
+  class="comment-button"
+  type="button"
+  (click)="_toggleCommentFormVisibility()"
+>
+  comment
+</button>
+
+<form *ngIf="_showCommentForm" method="POST" [class]="formClasses" [action]="commentEndpoint">
+  <textarea name="comment" rows="5" cols="50"></textarea>
+  <div class="actions">
+    <button type="submit">submit</button>
+    <button type="button" (click)="_toggleCommentFormVisibility()">
+      close
+    </button>
+  </div>
+</form>
