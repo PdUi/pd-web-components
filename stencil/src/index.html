@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/pd-web-components.esm.js"></script>
+    <script nomodule src="/build/pd-web-components.js"></script>
+
+    <style>
+      :root {
+        --pd-comment-color: grey;
+        --pd-comment-hover-color: lightblue;
+        --pd-submit-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <pd-comment comment-endpoint="/api/comment?api-version=1"></pd-comment>
+  </body>
+</html>
