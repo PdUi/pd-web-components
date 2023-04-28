@@ -96,7 +96,6 @@ export class CommentElement extends LitElement {
   private _showCommentForm = false;
 
   override render() {
-    console.log(this.commentEndpoint);
     return html`
       <button
         class="comment-button"

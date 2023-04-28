@@ -15,7 +15,6 @@ export class PdCommentComponent {
   _showCommentForm = false;
 
   _toggleCommentFormVisibility() {
-      console.log('here');
       this._showCommentForm = !this._showCommentForm;
 
       if (this._showCommentForm) {
